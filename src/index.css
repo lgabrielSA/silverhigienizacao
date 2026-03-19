@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 15% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 10%;
+
+    --primary: 220 15% 10%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 199 82% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 12% 48%;
+
+    --accent: 199 82% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 70% 42%;
+    --success-foreground: 0 0% 100%;
+
+    --surface: 210 25% 97%;
+    --surface-elevated: 0 0% 100%;
+
+    --border: 220 10% 92%;
+    --input: 220 10% 92%;
+    --ring: 199 82% 50%;
+
+    --radius: 0.75rem;
+
+    --shadow-sm: 0 1px 2px 0 hsl(220 15% 10% / 0.04);
+    --shadow-md: 0 4px 12px -2px hsl(220 15% 10% / 0.06), 0 2px 4px -2px hsl(220 15% 10% / 0.04);
+    --shadow-lg: 0 12px 32px -4px hsl(220 15% 10% / 0.08), 0 4px 8px -2px hsl(220 15% 10% / 0.04);
+    --shadow-xl: 0 20px 48px -8px hsl(220 15% 10% / 0.12), 0 8px 16px -4px hsl(220 15% 10% / 0.06);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply py-20 md:py-28 px-4;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* WhatsApp pulse */
+@keyframes whatsapp-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 hsla(142, 70%, 42%, 0.5); }
+  50% { box-shadow: 0 0 0 14px hsla(142, 70%, 42%, 0); }
+}
+.whatsapp-pulse {
+  animation: whatsapp-pulse 2s ease-in-out infinite;
+}
